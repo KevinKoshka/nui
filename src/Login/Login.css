@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.login-form {
+    max-width: 300px;
+}
+.login-header-msg {
+    text-align: center;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.input-group label, .input-group input {
+    text-align: center;
+}
+#loginSubmit {
+    margin: 10px 0;
+    width: 100%;
+}
+.val-msg {
+    text-align: center;
+    max-width: 300px;
+}
+#loginSuccessMsg {
+    color: forestgreen;
+}
+#loginErrorMsg {
+    color: crimson;
+}
