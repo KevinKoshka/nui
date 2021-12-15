@@ -1,4 +1,4 @@
-const baseApiURL = 'http://localhost:8000';
+const baseApiURL = 'http://localhost:8080';
 Object.freeze(baseApiURL);
 const CORS = {
     "Access-Control-Allow-Origin": baseApiURL,

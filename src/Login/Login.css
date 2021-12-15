@@ -2,32 +2,42 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 2;
 }
 .login-form {
     max-width: 300px;
+    background-color: var(--mk-white);
+    padding: var(--mk-gutter-xl) var(--mk-gutter-xxl);
 }
-.login-header-msg {
-    text-align: center;
-}
-.input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-.input-group label, .input-group input {
-    text-align: center;
-}
-#loginSubmit {
-    margin: 10px 0;
-    width: 100%;
-}
-.val-msg {
-    text-align: center;
-    max-width: 300px;
+.login-header svg {
+    fill: var(--mk-white);
 }
 #loginSuccessMsg {
     color: forestgreen;
 }
 #loginErrorMsg {
     color: crimson;
+}
+.login-logo {
+    width: 200px;
+    margin-top: 7.5vh;
+    margin-bottom: var(--mk-gutter-l);
+}
+
+.login-logo .mk-logo {
+    -webkit-animation: neon1 10.5s 1250ms var(--mk-bezier) infinite alternate;
+    animation: neon1 10.5s 1250ms var(--mk-bezier) infinite alternate;
+}
+
+@keyframes neon1 {
+    from {
+        filter: drop-shadow(0px 0px 50px var(--mk-gray));
+    }
+    to {
+        filter: drop-shadow(0px 0px 15px var(--mk-gray));
+    }
+}
+
+#loginSubmit {
+    margin-top: var(--mk-gutter-l);
 }

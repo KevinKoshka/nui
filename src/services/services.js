@@ -23,7 +23,18 @@ function loginPOST(username, password) {
     });
 }
 
+function mealsGET() {
+    const url = baseApiURL.concat('/get-meals');
+    return fetchAPI(url, {
+        method: 'get',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then((res) => res.json());
+}
+
 export {
     STATUS,
-    loginPOST
+    loginPOST,
+    mealsGET
 };

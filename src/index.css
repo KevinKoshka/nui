@@ -1,10 +1,256 @@
+:root {
+    --mk-green: #98CE00;
+    --mk-green-dark: #698e00;
+    --mk-white: #FFFFFC;
+    --mk-gray: #757780;
+    --mk-black: #001011;
+    --mk-light-blue: #6CCFF6;
+    --mk-shadow: 5px 5px rgb(117 119 128 / 75%);
+    --mk-font-thin: "Space Grotesk Thin", sans-serif;
+    --mk-font-regular: "Space Grotesk Regular", sans-serif;
+    --mk-font-medium: "Space Grotesk Medium", sans-serif;
+    --mk-font-bold: "Space Grotesk Bold", sans-serif;
+    --mk-bitter-thin: "Bitter Thin", sans-serif;
+    --mk-bitter-thin-italic: "Bitter Thin Italic", sans-serif;
+    --mk-bitter-xlight: "Bitter Extra Light", sans-serif;
+    --mk-bitter-light: "Bitter Light", sans-serif;
+    --mk-bitter-regular: "Bitter Regular", sans-serif;
+    --mk-bitter-medium: "Bitter Medium", sans-serif;
+    --mk-bitter-sbold: "Bitter Semi Bold", sans-serif;
+    --mk-bitter-bold: "Bitter Bold", sans-serif;
+    --mk-bitter-xbold: "Bitter Extra Bold", sans-serif;
+    --mk-bitter-black: "Bitter Black", sans-serif;
+    --mk-size-s: .85rem;
+    --mk-size-m: 1rem;
+    --mk-size-l: 1.5rem;
+    --mk-gutter-s: 5px;
+    --mk-gutter-m: 15px;
+    --mk-gutter-l: 25px;
+    --mk-gutter-xl: 45px;
+    --mk-gutter-xxl: 75px;
+    --mk-bezier: cubic-bezier(0.500, 0.000, 0.000, 1.000);
+}
+
+@font-face {
+    font-family: "Space Grotesk Thin";
+    src: url("./assets/SpaceGrotesk-VariableFont_wght.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Space Grotesk Regular";
+    src: url("./assets/SpaceGrotesk-VariableFont_wght.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Space Grotesk Medium";
+    src: url("./assets/SpaceGrotesk-VariableFont_wght.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Bitter Thin";
+    src: url("./assets/Bitter-Thin.ttf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Bitter Thin Italic";
+    src: url("./assets/Bitter-ThinItalic.ttf");
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Light";
+    src: url("./assets/Bitter-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Bitter Light Italic";
+    src: url("./assets/Bitter-LightItalic.ttf");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Regular";
+    src: url("./assets/Bitter-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Bitter Regular Italic";
+    src: url("./assets/Bitter-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Medium";
+    src: url("./assets/Bitter-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Bitter Medium Italic";
+    src: url("./assets/Bitter-MediumItalic.ttf");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Semi Bold";
+    src: url("./assets/Bitter-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Bitter Semi Bold Italic";
+    src: url("./assets/Bitter-SemiBoldItalic.ttf");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Bold";
+    src: url("./assets/Bitter-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Bitter Bold Italic";
+    src: url("./assets/Bitter-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Extra Bold";
+    src: url("./assets/Bitter-ExtraBold.ttf");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Bitter Extra Bold Italic";
+    src: url("./assets/Bitter-ExtraBoldItalic.ttf");
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Black";
+    src: url("./assets/Bitter-Black.ttf");
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Bitter Black Italic";
+    src: url("./assets/Bitter-BlackItalic.ttf");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bitter Extra Light";
+    src: url("./assets/Bitter-ExtraLight.ttf");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Bitter Extra Light Italic";
+    src: url("./assets/Bitter-ExtraLightItalic.ttf");
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Space Grotesk Thin";
+    src: url("./assets/SpaceGrotesk-VariableFont_wght.ttf");
+    font-weight: 300;
+}
+
+
+html, body, #root {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+html {
+    font-family: var(--mk-font-regular);
+    font-size: 16px;
+}
+
 body {
   margin: 0;
+  background-image: url("./assets/grad.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #6ccff6;
+}
+
+.val-msg {
+    text-align: center;
+    max-width: 300px;
+    transition: opacity 1s var(--mk-bezier);
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: none;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: var(--mk-gutter-m);
+}
+.input-group, .input-group > * {
+    transition-property: border-color, color;
+    transition-duration: 1250ms;
+    transition-timing-function: cubic-bezier(0.500, 0.000, 0.000, 1.000);
+}
+.input-group label, .input-group input {
+    text-align: left;
+}
+.input-group label {
+    font-family: var(--mk-font-bold);
+    margin-bottom: var(--mk-gutter-s);
+    color: var(--mk-gray);
+}
+.input-group input {
+    border: 3px solid var(--mk-gray);
+    background-color: var(--mk-white) !important;
+    padding: var(--mk-gutter-s) var(--mk-gutter-m);
+    font-size: var(--mk-size-s);
+    font-family: var(--mk-font-regular);
+    color: var(--mk-gray);
+}
+.input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+    border-color: var(--mk-black);
+    color: var(--mk-black);
+
+}
+.input-group input:focus + label, .input-group select:focus + label, .input-group textarea:focus + label {
+    color: var(--mk-black);
 }
 
 .hide {
-    display: none;
+    opacity: 0%;
 }
 .show {
+    opacity: 100%;
+}
+
+.button {
     display: block;
+    font-family: var(--mk-font-bold);
+    padding: var(--mk-gutter-s) var(--mk-gutter-l);
+    text-align: center;
+    cursor: pointer;
+    margin: var(--mk-gutter-m) var(--mk-gutter-l);
+} 
+.primary-button {
+    transition: box-shadow 250ms var(--mk-bezier), transform 250ms var(--mk-bezier);
+    background-color: var(--mk-green);
+    color: var(--mk-white);
+    box-shadow: 0px 3px 0px var(--mk-green-dark);
+}
+.primary-button:active {
+    transform: translate(0px, 3px);
+    box-shadow: 0px 0px 0px var(--mk-green-dark);
+}
+.plain-button {
+    color: var(--mk-gray);
+    transition: color 250ms var(--mk-bezier);
+}
+.plain-button:active {
+    color: var(--mk-black);
 }
